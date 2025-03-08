@@ -15,8 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('prolangs_id'); // Define the column
             $table->timestamps();
+
+            // Add foreign key constraint
+            $table->foreign('prolangs_id')
+                ->references('id')
+                ->on('pro_langs')
+                ->onDelete('cascade');
+
         });
     }
 

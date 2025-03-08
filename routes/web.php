@@ -37,6 +37,10 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     //User List
     Route::get('/user-list', [UserController::class, 'index'])->name('users.list');
 
+    //Pro Langs
+    Route::resource('/pro-langs', \App\Http\Controllers\Admin\ProLangController::class);
+
+
     // Route end
 });
 
