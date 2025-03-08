@@ -9,7 +9,7 @@
                                 <div class="heading  cd-headline clip is-full-width">
                                     <h5 class="text-u ls-01 text-color-3">Get Startted</h5>
                                     <h2>Hello, I’m</h2>
-                                    <h1>Madhav Jha</h1>
+                                    <h1>{{ $basicsetting->title }}</h1>
                                     <h3 class="cd-words-wrapper text-color-3">
                                         <b class="is-visible"> <span class="gold-title">Full Stack Web Developer</span></b>
                                         <b> <span class="gold-title">Based in Nagpur, Maharashtra.</span></b>

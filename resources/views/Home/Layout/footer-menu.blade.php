@@ -2,7 +2,7 @@
     <div class="themes-container">
         <div class="row">
             <div class="col-lg-3 col-md-12 col-sm-12">
-                <p class="title-bottom"> © 2023 <a href="#">Madhav Jha</a></p>
+                <p class="title-bottom"> © {{ now()->year }} <a href="#">{{ $basicsetting->title }}</a></p>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="wrap-list">

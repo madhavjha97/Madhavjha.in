@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,24 @@ Route::middleware('auth')->group(function () {
 });
 
 
+// Admin
+Route::prefix('admin')->middleware('admin')->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+
+    //Basic Settings
+    Route::get('/settings', [\App\Http\Controllers\BasicSettingController::class, 'index'])->name('admin.settings');
+    Route::get('/settings-edit', [\App\Http\Controllers\BasicSettingController::class, 'edit'])->name('admin.settings.edit');
+    Route::post('/settings-edit', [\App\Http\Controllers\BasicSettingController::class, 'update'])->name('admin.settings.update');
+
+    //User List
+    Route::get('/user-list', [UserController::class, 'index'])->name('users.list');
+
+    // Route end
+});
 
 
 require __DIR__.'/auth.php';

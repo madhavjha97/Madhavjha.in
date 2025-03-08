@@ -6,8 +6,8 @@
                     <div class="wrap-box relative">
                         <div id="site-logo" class="clearfix">
                             <div id="site-logo-inner">
-                                <a href="index.php" rel="home" class="main-logo">
-                                    <h2>Madhav Jha</h2>
+                                <a href="{{ route('home') }}" rel="home" class="main-logo">
+                                    <h2>{{ $basicsetting->title }}</h2>
                                     <!-- <img id="logo_header" src="assets/images/logo/logo.png" alt="img" width="155" height="46"> -->
                                 </a>
                             </div>
@@ -16,11 +16,9 @@
                         <nav id="main-nav" class="main-nav">
                             <ul id="menu-primary-menu" class="menu">
                                 <li class="menu-item  current-menu-item">
-                                    <a href="index.php">Home</a>
+                                    <a href="{{ route('home') }}">Home</a>
 
                                 </li>
-
-
                                 <li class="menu-item menu-item-has-children ">
                                     <a href="#">Tutorials</a>
                                     <ul class="sub-menu">
@@ -42,6 +40,20 @@
                                     <a href="https://github.com/DopplerHQ/awesome-interview-questions">Interview Q/A</a>
                                 </li>
 
+                                <li class="menu-item ">
+                                    <!-- Auth Links -->
+                                    @auth
+                                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                                        <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                                            @csrf
+                                            <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer;">Logout</button>
+                                        </form>
+                                    @else
+                                        <a href="{{ route('login') }}">Login</a>
+                                        <a href="{{ route('register') }}">Register</a>
+                                    @endauth
+                                </li>
+
                                 <li class="menu-item menu-item-has-children">
                                     <a data-scroll href="#blog">More</a>
                                     <ul class="sub-menu">
@@ -52,12 +64,11 @@
                                     </ul>
                                 </li>
 
-
                             </ul>
                         </nav><!-- /#main-nav -->
                         <div class="flat-button-top">
                             <div class="sc-btn-top" id="site-header">
-                                <a href="#" class="btn-action"><span>Contact me
+                                <a href="{{ route('contact') }}" class="btn-action"><span>Contact me
                                             </span></a>
                             </div>
                         </div>
@@ -66,13 +77,4 @@
             </div>
         </div>
     </div>
-    <div class="mode_switcher">
-        <a href="#" class="light is_active">
-            <img src="assets/images/icon/sun.png" alt="">
-        </a>
-        <a href="#" class="dark">
-            <img src="assets/images/icon/moon.png" alt="">
-        </a>
-    </div>
-
 </header>

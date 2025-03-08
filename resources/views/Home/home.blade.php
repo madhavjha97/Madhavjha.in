@@ -16,7 +16,7 @@
                         <div class="heading">
                             <div class="heading-section">
                                 <h5>About Us</h5>
-                                <h2>I’m Madhav Jha </h2>
+                                <h2>I’m {{ $basicsetting->title }} </h2>
                                 <p class="p-18">Hi there! I am Madhav! You can also know me as PHP-Mysql & React.JS Developer. I've been coding for over 4 year now. As a Full Stack Web Developer. I've worked with freelancing groups to help build web apps & helped small businesses scale their companies worldwide. I deliver Real Vaue by building large scale projects to help companies scale their business with my problem solving skills through web technologies. </p>
                             </div>
                             <div class="sc-btn-about ">
