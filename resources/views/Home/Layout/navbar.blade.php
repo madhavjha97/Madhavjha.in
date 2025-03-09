@@ -22,13 +22,18 @@
                                 <li class="menu-item menu-item-has-children ">
                                     <a href="#">Tutorials</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item current-item"><a href="html.php">HTML</a></li>
-                                        <li class="menu-item"><a href="css.php">CSS</a></li>
-                                        <li class="menu-item"><a href="bootstrap.php">Bootstrap</a></li>
-                                        <li class="menu-item"><a href="javascript.php">JavaScript</a></li>
-                                        <li class="menu-item"><a href="react.php">React</a></li>
-                                        <li class="menu-item"><a href="mysql.php">MySQL</a></li>
-                                        <li class="menu-item"><a href="#">PHP</a></li>
+                                        @foreach($prolang as $lang)
+                                            <li class="menu-item current-item"><a href="#">{{ $lang->name }}</a></li>
+                                        @endforeach
+
+
+{{--                                        <li class="menu-item current-item"><a href="html.php">HTML</a></li>--}}
+{{--                                        <li class="menu-item"><a href="css.php">CSS</a></li>--}}
+{{--                                        <li class="menu-item"><a href="bootstrap.php">Bootstrap</a></li>--}}
+{{--                                        <li class="menu-item"><a href="javascript.php">JavaScript</a></li>--}}
+{{--                                        <li class="menu-item"><a href="react.php">React</a></li>--}}
+{{--                                        <li class="menu-item"><a href="mysql.php">MySQL</a></li>--}}
+{{--                                        <li class="menu-item"><a href="#">PHP</a></li>--}}
                                     </ul>
                                 </li>
 

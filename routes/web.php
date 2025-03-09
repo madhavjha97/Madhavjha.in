@@ -40,6 +40,9 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     //Pro Langs
     Route::resource('/pro-langs', \App\Http\Controllers\Admin\ProLangController::class);
 
+    //T
+    Route::resource('/tutorials', \App\Http\Controllers\Admin\TutorialController::class);
+
 
     // Route end
 });

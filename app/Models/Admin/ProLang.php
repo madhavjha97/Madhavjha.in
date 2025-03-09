@@ -16,4 +16,5 @@ class ProLang extends Model
     ];
 
     protected $dates  = ['deleted_at'];
+    protected $table = 'pro_langs';
 }
