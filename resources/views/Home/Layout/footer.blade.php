@@ -9,36 +9,77 @@
                                 <h3><a href="https://roadmap.sh/javascript">{{ $basicsetting->title }}</a> </h3>
                             </a>
                         </div>
-                        <p class="sub-widget-logo text-color-4">Over the years I have helped over 5k developers to learn the Web Development and its surrounding ecosystem of technologies. </p>
+                        <p class="sub-widget-logo text-color-4">Passionate Full Stack Developer & Mentor, transforming ideas into scalable digital solutions. Crafting code, sharing knowledge, and building the future—one line at a time.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-12">
                 <div class="widget widget-menu style-2 home">
-                    <h4 class="title-widget text-color-2">Contact</h4>
-                    <p class="text-color-4">Mumbai, Maharashtra, India</p>
-                    <p><a class="email " href="{{ $basicsetting->email }}">{{ $basicsetting->email }} </a>  </p>
-                    <!-- <p><a class="phone " href="tel:0123456789">+99 (0) 101 0000 888 </a>  </p>                 -->
+                    <h4 class="title-widget text-color-2">Connect</h4>
+                    <!-- Location -->
+                    <p class="text-color-4"><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</p>
+ g
+
+                    <!-- Email -->
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a class="email" href="mailto:{{ $basicsetting->email }}">{{ $basicsetting->email }}</a>
+                    </p>
+
+                    <!-- Phone (Uncomment and Add Number If Needed) -->
+                    {{-- <p>
+                        <i class="fas fa-phone"></i>
+                        <a class="phone" href="tel:+911234567890">+91 12345 67890</a>
+                    </p> --}}
+
+                    <!-- Social Media Links -->
+                    <p>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/yourgithub" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="https://www.instagram.com/yourprofile" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </p>
                 </div>
+
             </div>
 
             <div class="col-lg-4 col-md-4 col-12">
                 <div class="widget widget-menu style-3">
-                    <h4 class="title-widget text-color-2 "> Accelerate your career.</h4>
-                    <p class="text-color-4">Get the {{ now()->year }} Full Stack Web Developer Roadmap                            </p>
-                    <div class="widget-subcribe home">
-                        <div class="form-subcribe">
-                            <form id="subscribe-form" action="#" method="GET" accept-charset="utf-8" class="form-submit">
-                                <input name="text" value="" class="text" type="text" placeholder="Email Id" required="">
-                                <button id="submit" name="submit" type="submit" class="btn-1 btn-8">
-                                    <span><i class="fal fa-long-arrow-right"></i></span>
-                                </button>
-                            </form>
-                        </div>
+                    <h4 class="title-widget text-color-2 "> Connect me on WhatsApp</h4>
+                    <p class="text-color-4">"If you have any suggestions, queries, or need guidance—whether it's about a project, career, or anything else—feel free to drop me a message on WhatsApp. Let's connect and collaborate!                   </p>
+                    <div class="widget-subscribe home">
+                        <a href="https://wa.me/yourwhatsappphonenumber" target="_blank" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp whatsapp-icon"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer><!-- /#footer -->
+
+<style>
+    .whatsapp-btn {
+        display: inline-block;
+        font-size: 50px;
+        color: #25D366;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .whatsapp-btn:hover {
+        transform: scale(1.1);
+        color: #128C7E;
+    }
+
+</style>

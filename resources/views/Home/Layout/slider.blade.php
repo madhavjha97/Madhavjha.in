@@ -67,10 +67,10 @@
                                 </div>   -->
                                 <div class="info">
                                     <div class="info-author flex">
-                                        <img class="" src="assets/eduladdr.png" alt="" width="48">
+{{--                                        <img class="" src="assets/eduladdr.png" alt="" width="48">--}}
                                         <div class="title-author text-color-1">
                                             <h5>Full Stack Developer</h5>
-                                            <div class="texts">Eduladdr Solution</div>
+                                            <div class="texts">Laravel, PHP, React</div>
                                         </div>
                                         <div class="mark-dots absolute">...</div>
                                     </div>

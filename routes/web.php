@@ -7,7 +7,27 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('Home.home');
 //});
+Route::get('/auth/{provider}', function ($provider) {
+    return \Laravel\Socialite\Facades\Socialite::driver($provider)->redirect();
+});
 
+Route::get('/auth/{provider}/callback', function ($provider) {
+    $socialUser = \Laravel\Socialite\Facades\Socialite::driver($provider)->user();
+
+    // Check if user already exists
+    $user = \App\Models\User::updateOrCreate([
+        'email' => $socialUser->getEmail(),
+    ], [
+        'name' => $socialUser->getName(),
+        'provider_id' => $socialUser->getId(),
+        'provider' => $provider,
+        'password' => bcrypt('random_password'),
+    ]);
+
+    \Illuminate\Support\Facades\Auth::login($user);
+
+    return redirect()->route('dashboard');
+});
 
 
 Route::get('/dashboard', function () {

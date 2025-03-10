@@ -19,6 +19,15 @@
                                     <a href="{{ route('home') }}">Home</a>
 
                                 </li>
+                                <li class="menu-item">
+                                    <a href="{{ route('about') }}"> About Me</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{ route('project') }}"> Project</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{ route('student-zone') }}"> Student Zone</a>
+                                </li>
                                 <li class="menu-item menu-item-has-children ">
                                     <a href="#">Tutorials</a>
                                     <ul class="sub-menu">
@@ -37,13 +46,9 @@
                                     </ul>
                                 </li>
 
-                                <li class="menu-item">
-                                    <a href="project.php"> Project</a>
-                                </li>
 
-                                <li class="menu-item ">
-                                    <a href="https://github.com/DopplerHQ/awesome-interview-questions">Interview Q/A</a>
-                                </li>
+
+
 
                                 <li class="menu-item ">
                                     <!-- Auth Links -->
@@ -63,7 +68,7 @@
                                     <a data-scroll href="#blog">More</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="blog.html">Free Resources</a></li>
-                                        <li class="menu-item"><a href="blog-standard.html">About</a></li>
+                                        <li class="menu-item"><a href="blog-standard.html">Interview Q/A</a></li>
                                         <li class="menu-item"><a href="blog-details.html">Blog Details</a></li>
                                         <li class="menu-item"><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
                                     </ul>

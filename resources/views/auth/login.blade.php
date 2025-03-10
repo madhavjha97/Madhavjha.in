@@ -44,4 +44,6 @@
             </x-primary-button>
         </div>
     </form>
+    <a href="{{ url('/auth/google') }}" class="btn btn-danger">Login with Google</a>
+
 </x-guest-layout>
